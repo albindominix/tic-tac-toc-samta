@@ -57,7 +57,6 @@ function App() {
     setXIsNext(true);
 
     if (winner === "X") {
-      //did like this because thought updating directly was causing infinte re-render
       const scores = { ...playerScores, X: playerScores.X + 1 };
       setPlayerScores(scores);
       localStorage.setItem("score", JSON.stringify(scores));
